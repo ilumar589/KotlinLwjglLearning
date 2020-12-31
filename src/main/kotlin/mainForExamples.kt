@@ -1,3 +1,6 @@
+import engine.SHADERS_BASE_PATH
+import engine.ShaderProgram
+import engine.readFileAsText
 import org.lwjgl.glfw.Callbacks
 import org.lwjgl.glfw.GLFW
 import org.lwjgl.glfw.GLFWErrorCallback
@@ -89,7 +92,8 @@ fun init() {
 fun loop() {
     ShaderProgram(
         readFileAsText("$SHADERS_BASE_PATH/vertex.glsl"),
-        readFileAsText("$SHADERS_BASE_PATH/fragment.glsl")).bind()
+        readFileAsText("$SHADERS_BASE_PATH/fragment.glsl")
+    ).bind()
 
     val vaoAndTexture: Pair<Int?, Int?> = loadTexture()
 

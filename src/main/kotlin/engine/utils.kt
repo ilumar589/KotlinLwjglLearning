@@ -1,3 +1,5 @@
+package engine
+
 import java.io.File
 
 const val SHADERS_BASE_PATH = "src/main/resources/shaders"
